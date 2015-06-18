@@ -17,6 +17,9 @@ It makes you able to trigger chords using single notes.</br>
 
 A concept like this has more potential but the Logic X Scripter is quite limited at the moment.</p>
 
+It is perhaps not the most elegant of code but I wrote it for a friend while reading for my dissertation.</br>
+Some other version will be made in the future.</p>
+
 These chords are supported:</br>
 Major</br>
 Major 7th</br>
