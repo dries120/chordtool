@@ -1,38 +1,36 @@
-Created by Andi Coryn
-Website: Http://www.andicoryn.com
+Created by Andi Coryn</br>
+Website: Http://www.andicoryn.com</p>
 
-Chord tool is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
-More info at: http://creativecommons.org/licenses/by-nc/4.0/
+Chord tool is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</br>
+More info at: http://creativecommons.org/licenses/by-nc/4.0/</p>
 
-But in case anyone is wondering:
-Yes, you are allowed to make commercial music using this script.
+But in case anyone is wondering:</br>
+Yes, you are allowed to make commercial music using this script.</p>
 
-Info
-----
 
-Chord tool is a free script for the Scripter midi plugin that ships with Logic X.
+Chord tool is a free script for the Scripter midi plugin that ships with Logic X.</p>
 
-It makes you able to trigger chords using single notes.
-18 different chord types can be chosen from with the keyswitches between G-2 and C0.
+It makes you able to trigger chords using single notes.</br>
+18 different chord types can be chosen from with the keyswitches between G-2 and C0.</p>
 
-A concept like this has more potential but the Logic X Scripter is quite limited at the moment.
+A concept like this has more potential but the Logic X Scripter is quite limited at the moment.</p>
 
-These chords are supported:
-Major
-Major 7th
-Major 9th
-Minor
-Minor 6th
-Minor 7th
-Minor Major 7th
-Minor 9th
-Minor 11th
-Diminished
-Diminished 7
-Augmented
-Suspended 2nd
-7th suspended 2nd
-Add 2
-Add 4th
-6th
-6 9
+These chords are supported:</br>
+Major</br>
+Major 7th</br>
+Major 9th</br>
+Minor</br>
+Minor 6th</br>
+Minor 7th</br>
+Minor Major 7th</br>
+Minor 9th</br>
+Minor 11th</br>
+Diminished</br>
+Diminished 7</br>
+Augmented</br>
+Suspended 2nd</br>
+7th suspended 2nd</br>
+Add 2</br>
+Add 4th</br>
+6th</br>
+6 9</p>
