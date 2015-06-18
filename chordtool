@@ -4,6 +4,8 @@
 // Chord tool is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
 // More info at: http://creativecommons.org/licenses/by-nc/4.0/
 
+// Copy all of this code into the Logic X Scripter and choose "Run Script".
+
 var ChordType = "M";
 var ChordTypeName = "Major";
 var CurrentNote = "0";
