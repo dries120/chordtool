@@ -7,6 +7,8 @@ More info at: http://creativecommons.org/licenses/by-nc/4.0/</p>
 But in case anyone is wondering:</br>
 Yes, you are allowed to make commercial music using this script.</p>
 
+Info</br>
+----</p>
 
 Chord tool is a free script for the Scripter midi plugin that ships with Logic X.</p>
 
