@@ -1,0 +1,296 @@
+// Created by Andi Coryn
+// Website: Http://www.andicoryn.com
+
+// Chord tool is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+// More info at: http://creativecommons.org/licenses/by-nc/4.0/
+
+var ChordType = "M";
+var ChordTypeName = "Major";
+var CurrentNote = "0";
+var Pitch1 = 4;
+var Pitch2 = 7;
+var Pitch3 = 0;
+var Pitch4 = 0;
+var Pitch5 = 0;
+var Pitch6 = 0;
+var PitchNote0 = 0;
+var PitchNote1 = 0;
+var PitchNote2 = 0;
+var PitchNote3 = 0;
+var PitchNote4 = 0;
+var PitchNote5 = 0;
+var PitchNote6 = 0;
+
+
+function HandleMIDI(event) {
+if( event instanceof Note == true ) {
+
+PitchNote0 = 0;
+PitchNote1 = 0;
+PitchNote2 = 0;
+PitchNote3 = 0;
+PitchNote4 = 0;
+PitchNote5 = 0;
+PitchNote6 = 0;
+
+
+if (event.pitch == 24)
+	{
+		ChordType = "M";
+		ChordTypeName = " Major";
+		Trace (ChordTypeName);
+		Pitch1 = 4;
+		Pitch2 = 7;
+	}
+if (event.pitch == 23)
+	{
+		ChordType = "M7";
+		ChordTypeName = " Major 7th";
+		Trace (ChordTypeName);
+		Pitch1 = 4;
+		Pitch2 = 7;
+		Pitch3 = 11;
+	}
+if (event.pitch == 22)
+	{
+		ChordType = "M9";
+		ChordTypeName = " Major 9th";
+		Trace (ChordTypeName);
+		Pitch1 = 4;
+		Pitch2 = 7;
+		Pitch3 = 11;
+		Pitch4 = 14;
+	}
+
+
+if (event.pitch == 21)
+	{
+		ChordType = "m";
+		ChordTypeName = " Minor";
+		Trace (ChordTypeName);
+		Pitch1 = 3;
+		Pitch2 = 7;
+	}
+if (event.pitch == 20)
+	{
+		ChordType = "m6";
+		ChordTypeName = " Minor 6th";
+		Trace (ChordTypeName);
+		Pitch1 = 3;
+		Pitch2 = 7;
+		Pitch3 = 9;
+	}
+if (event.pitch == 19)
+	{
+		ChordType = "m7";
+		ChordTypeName = " Minor 7th";
+		Trace (ChordTypeName);
+		Pitch1 = 3;
+		Pitch2 = 7;
+		Pitch3 = 10;
+	}
+	if (event.pitch == 18)
+	{
+		ChordType = "mM7";
+		ChordTypeName = " Minor Major 7th";
+		Trace (ChordTypeName);
+		Pitch1 = 3;
+		Pitch2 = 7;
+		Pitch3 = 11;
+	}	
+if (event.pitch == 17)
+	{
+		ChordType = "m9";
+		ChordTypeName = " Minor 9th";
+		Trace (ChordTypeName);
+		Pitch1 = 3;
+		Pitch2 = 7;
+		Pitch3 = 10;
+		Pitch4 = 14;
+	}
+if (event.pitch == 16)
+	{
+		ChordType = "m11";
+		ChordTypeName = " Minor 11th";
+		Trace (ChordTypeName);
+		Pitch1 = 3;
+		Pitch2 = 7;
+		Pitch3 = 10;
+		Pitch4 = 14;
+		Pitch5 = 17;
+	}
+
+if (event.pitch == 15)
+	{
+		ChordType = "dim";
+		ChordTypeName = " Diminished";
+		Trace (ChordTypeName);
+		Pitch1 = 3;
+		Pitch2 = 6;
+	}			
+if (event.pitch == 14)
+	{
+		ChordType = "dim7";
+		ChordTypeName = " Diminished 7";
+		Trace (ChordTypeName);
+		Pitch1 = 3;
+		Pitch2 = 6;
+		Pitch3 = 9;
+	}	
+
+if (event.pitch == 13)
+	{
+		ChordType = "aug";
+		ChordTypeName = " Augmented";
+		Trace (ChordTypeName);
+		Pitch1 = 4;
+		Pitch2 = 8;
+	}		
+if (event.pitch == 12)
+	{
+		ChordType = "sus2";
+		ChordTypeName = " Suspended 2nd";
+		Trace (ChordTypeName);
+		Pitch1 = 2;
+		Pitch2 = 7;
+	}		
+if (event.pitch == 11)
+	{
+		ChordType = "7sus2";
+		ChordTypeName = " 7th Suspended 2nd";
+		Trace (ChordTypeName);
+		Pitch1 = 2;
+		Pitch2 = 7;
+		Pitch3 = 10;
+	}		
+if (event.pitch == 10)
+	{
+		ChordType = "add2";
+		ChordTypeName = " Add 2";
+		Trace (ChordTypeName);
+		Pitch1 = 2;
+		Pitch2 = 4;
+		Pitch3 = 7;
+	}	
+if (event.pitch == 9)
+	{
+		ChordType = "add4";
+		ChordTypeName = " Add 4th";
+		Trace (ChordTypeName);
+		Pitch1 = 4;
+		Pitch2 = 5;
+		Pitch3 = 7;
+	}			
+if (event.pitch == 8)
+	{
+		ChordType = "6";
+		ChordTypeName = " 6th";
+		Trace (ChordTypeName);
+		Pitch1 = 4;
+		Pitch2 = 7;
+		Pitch3 = 9;
+	}			
+if (event.pitch == 7)
+	{
+		ChordType = "69";
+		ChordTypeName = " 6 9";
+		Trace (ChordTypeName);
+		Pitch1 = 4;
+		Pitch2 = 7;
+		Pitch3 = 9;
+		Pitch4 = 14;
+	}		
+
+if (event.pitch < 31) {
+	//Trace("keyswitch area");
+} else	if (ChordType == "M" || ChordType == "m" || ChordType == "dim" || ChordType == "aug" || ChordType == "sus2" || ChordType == "sus4") {
+				CurrentNote = event.pitch;
+				event.pitch = CurrentNote; PitchNote0 = event.pitch; event.send(); 
+				event.pitch = CurrentNote + Pitch1; PitchNote1 = event.pitch; event.send(); 
+				event.pitch = CurrentNote + Pitch2; PitchNote2 = event.pitch; event.send(); 
+				
+	} else	if (ChordType == "M7" || ChordType == "m6" || ChordType == "m7" || ChordType == "mM7" || ChordType == "dim7" || ChordType == "dimhalf" || ChordType == "7sus2" || ChordType == "add2" || ChordType == "7sus4" || ChordType == "add4" || ChordType == "6" || ChordType == "7" || ChordType == "7b5" || ChordType == "7s5" || ChordType == "add9"
+) {
+				CurrentNote = event.pitch;
+				event.pitch = CurrentNote; PitchNote0 = event.pitch; event.send();
+				event.pitch = CurrentNote + Pitch1; PitchNote1 = event.pitch; event.send();
+				event.pitch = CurrentNote + Pitch2; PitchNote2 = event.pitch; event.send();
+				event.pitch = CurrentNote + Pitch3; PitchNote3 = event.pitch; event.send();
+	} else	if (ChordType == "M9" || ChordType == "m9" || ChordType == "69" || ChordType == "9" || ChordType == "7b9" || ChordType == "7s9"
+) {
+				CurrentNote = event.pitch;
+				event.pitch = CurrentNote; PitchNote0 = event.pitch; event.send();
+				event.pitch = CurrentNote + Pitch1; PitchNote1 = event.pitch; event.send();
+				event.pitch = CurrentNote + Pitch2; PitchNote2 = event.pitch; event.send();
+				event.pitch = CurrentNote + Pitch3; PitchNote3 = event.pitch; event.send();
+				event.pitch = CurrentNote + Pitch4; PitchNote4 = event.pitch; event.send();
+	} else	if (ChordType == "M11" || ChordType == "M13" || ChordType == "m11" || ChordType == "m13" || ChordType == "11"
+) {
+				CurrentNote = event.pitch;
+				event.pitch = CurrentNote; PitchNote0 = event.pitch; event.send();
+				event.pitch = CurrentNote + Pitch1; PitchNote1 = event.pitch; event.send();
+				event.pitch = CurrentNote + Pitch2; PitchNote2 = event.pitch; event.send();
+				event.pitch = CurrentNote + Pitch3; PitchNote3 = event.pitch; event.send();
+				event.pitch = CurrentNote + Pitch4; PitchNote4 = event.pitch; event.send();
+				event.pitch = CurrentNote + Pitch5; PitchNote5 = event.pitch; event.send();
+	} 
+	
+	
+
+
+
+		Trace("-----------------------");
+
+if (PitchNote0 == 60 || PitchNote0 == 72|| PitchNote0 == 84 || PitchNote0 == 96 || PitchNote0 == 108 || PitchNote0 == 120)
+	{
+		Trace ("C " + ChordTypeName);
+	}
+if (PitchNote0 == 61 || PitchNote0 == 73|| PitchNote0 == 85 || PitchNote0 == 97 || PitchNote0 == 109 || PitchNote0 == 121)
+	{
+		Trace ("C# " + ChordTypeName);
+	}
+if (PitchNote0 == 62 || PitchNote0 == 74|| PitchNote0 == 86 || PitchNote0 == 98 || PitchNote0 == 110 || PitchNote0 == 122)
+	{
+		Trace ("D " + ChordTypeName);
+	}
+if (PitchNote0 == 63 || PitchNote0 == 75|| PitchNote0 == 87 || PitchNote0 == 99 || PitchNote0 == 111 || PitchNote0 == 123)
+	{
+		Trace ("D# " + ChordTypeName);
+	}
+if (PitchNote0 == 64 || PitchNote0 == 76|| PitchNote0 == 88 || PitchNote0 == 100 || PitchNote0 == 112 || PitchNote0 == 124)
+	{
+		Trace ("E " + ChordTypeName);
+	}
+if (PitchNote0 == 65 || PitchNote0 == 77|| PitchNote0 == 89 || PitchNote0 == 101 || PitchNote0 == 113 || PitchNote0 == 125)
+	{
+		Trace ("F " + ChordTypeName);
+	}
+if (PitchNote0 == 66 || PitchNote0 == 78|| PitchNote0 == 90 || PitchNote0 == 102 || PitchNote0 == 114 || PitchNote0 == 126)
+	{
+		Trace ("F# " + ChordTypeName);
+	}
+if (PitchNote0 == 67 || PitchNote0 == 79|| PitchNote0 == 91 || PitchNote0 == 103 || PitchNote0 == 115 || PitchNote0 == 127)
+	{
+		Trace ("G " + ChordTypeName);
+	}
+if (PitchNote0 == 68 || PitchNote0 == 80|| PitchNote0 == 92 || PitchNote0 == 104 || PitchNote0 == 116 || PitchNote0 == 128)
+	{
+		Trace ("G# " + ChordTypeName);
+	}
+if (PitchNote0 == 69 || PitchNote0 == 81|| PitchNote0 == 93 || PitchNote0 == 105 || PitchNote0 == 117 || PitchNote0 == 129)
+	{
+		Trace ("A " + ChordTypeName);
+	}
+if (PitchNote0 == 70 || PitchNote0 == 82|| PitchNote0 == 94 || PitchNote0 == 106 || PitchNote0 == 118 || PitchNote0 == 130)
+	{
+		Trace ("A# " + ChordTypeName);
+	}
+if (PitchNote0 == 71 || PitchNote0 == 83|| PitchNote0 == 95 || PitchNote0 == 107 || PitchNote0 == 119 || PitchNote0 == 131)
+	{
+		Trace ("B " + ChordTypeName);
+	}
+event.trace();
+}
+}
+
+var PluginParameters = [{name:"Keyswitches", type:"menu", valueStrings:["C0: Major", "B-1: Major 7th", "A#-1: Major 9th", "A-1: Minor", "G#-1: Minor 6th", "G-1: Minor 7th", "F#-1: Minor Major 7th", "F-1: Minor 9th", "E-1: Minor 11th", "D#-1: Diminished", "D-1: Diminished 7", "C#-1: Augmented", "C-1: Suspended 2nd", "B-2: 7th Suspended 2nd", "A#-2: Add 2", "A-2: Add 4th", "G#-2: 6th", "G-2: 6 9"]}];
