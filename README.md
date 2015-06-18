@@ -15,6 +15,8 @@ Chord tool is a free script for the Scripter midi plugin that ships with Logic X
 It makes you able to trigger chords using single notes.</br>
 18 different chord types can be chosen from with the keyswitches between G-2 and C0.</p>
 
+For a simple demonstration, check here: https://youtu.be/PALtjuBD-TU</p>
+
 A concept like this has more potential but the Logic X Scripter is quite limited at the moment.</p>
 
 It is perhaps not the most elegant of code but I wrote it for a friend while reading for my dissertation.</br>
